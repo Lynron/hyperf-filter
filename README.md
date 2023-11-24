@@ -7,7 +7,9 @@ composer require linron/hyperf-filter
 ```
 
 ### use
+
 ####新建Filter
+
 ```bash
 <?php
 declare(strict_types=1);
@@ -76,7 +78,9 @@ class TenderListFilter extends QueryFilter
     }
 }
 ```
+
 ####使用Filter
+
 ```bash
 $query = TenderModel::filter($post, TenderListFilter::class);
 ````
