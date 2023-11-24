@@ -1,0 +1,37 @@
+{
+    "name": "linron/hyperf-filter",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "hyperf",
+        "filter",
+        "swoole"
+    ],
+    "authors": [
+        {
+            "name": "Linron",
+            "email": "547042792@qq.com",
+            "homepage": "https://github.com/Lynron"
+        }
+    ],
+    "description": "Powerful REPL for the Hyperf framework.",
+    "autoload": {
+        "psr-4": {
+            "Hyperf\\Filter\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HyperfTest\\Filter\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=8.0",
+        "ext-swoole": ">=4.5",
+        "hyperf/database": "~3.0.0"
+    },
+    "require-dev": {
+        "hyperf/testing": "~3.0.0"
+    }
+}
