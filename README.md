@@ -81,6 +81,32 @@ class TenderListFilter extends QueryFilter
 }
 ```
 
+#### 在模型基类中
+
+```bash
+<?php
+
+declare(strict_types=1);
+
+namespace App\Model;
+
+use App\Utils\DiUtils;
+use Hyperf\Database\Model\Builder;
+use Hyperf\Utils\ApplicationContext;
+use Hyperf\DbConnection\Model\Model as BaseModel;
+
+/**
+ * @method static Builder filter(...$args)
+ */
+abstract class Model extends BaseModel
+{
+    public function scopeFilter(Builder $query, array $params, string $filter): Builder
+    {
+        return ApplicationContext::getContainer()->get($filter)->filter($query, $params);
+    }
+}
+````
+
 #### 使用Filter
 
 ```bash
