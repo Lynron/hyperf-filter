@@ -1,14 +1,14 @@
 ### 说明
 
-### install
+### 安装
 
 ```bash
 composer require linron/hyperf-filter
 ```
 
-### use
+### 使用
 
-####新建Filter
+#### 新建Filter
 
 ```bash
 <?php
@@ -79,7 +79,7 @@ class TenderListFilter extends QueryFilter
 }
 ```
 
-####使用Filter
+#### 使用Filter
 
 ```bash
 $query = TenderModel::filter($post, TenderListFilter::class);
