@@ -110,5 +110,5 @@ abstract class Model extends BaseModel
 #### 使用Filter
 
 ```bash
-$query = TenderModel::filter($post, TenderListFilter::class);
+$query = TenderModel::filter($request->post(), TenderListFilter::class);
 ````
